@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Clase13Ang';
+  title1 = 'Uso de Pipes';
+  title2 = 'Currency Pipes';
+  valor = ' ';
+  eeuu = 'USD'
+  europa ='EUR'
+  moneda = 'number';
+
+
 }

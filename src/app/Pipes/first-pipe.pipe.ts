@@ -6,13 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FirstPipePipe implements PipeTransform {
 
-    transform(values: string[], args: string): string[] {
-      let result: string[] = [];
-      for(const value of values){
-        if(value.toLowerCase().indexOf(args.toLowerCase()) > -1){
-          result=[...result, value];
-      }
+    transform(value: unknown, ...args: unknown[]): unknown {
+      return null;
     }
-    return result;
+    
   }
-}

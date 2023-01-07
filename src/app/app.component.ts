@@ -9,9 +9,6 @@ export class AppComponent {
   title1 = 'Uso de Pipes';
   title2 = 'Currency Pipes';
   valor = ' ';
-  eeuu = 'USD'
-  europa ='EUR'
   moneda = 'number';
-
-
+  symbolMoney = '';
 }

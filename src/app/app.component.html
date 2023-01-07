@@ -1,50 +1,56 @@
-<div class="container justify-content-center mt-5">
-  <div class="row">
-    <div class="col-sm-6 text-center mb-3 text-primary fs-3">
-      {{title1 | uppercase}}
+
+ <div class="container justify-content-center mt-5">
+    <div class="row">
+      <div class="col-md-6 text-center mb-3 text-primary fs-3">
+        {{title1 | uppercase}}
+      </div>
     </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputValor" class="col-sm-2 col-form-label  ">Valor:</label>
-    <div class="col-sm-6">
-      <input type="text" class="form-control border-primary" id="inputValor" [(ngModel)]="valor">
+    <div class="row mb-3">
+      <label for="inputValor" class="col-md-2 col-form-label  ">Valor:</label>
+      <div class="col-md-4">
+        <input type="text" class="form-control border-primary" id="inputValor" [(ngModel)]="valor">
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6">
-      <h6>Resultado: <b>{{valor | uppercase}}</b></h6>
+    <div class="row">
+      <div class="col-md-6">
+        <h6>Resultado: <b>{{valor | uppercase}}</b></h6>
+      </div>
     </div>
-  </div>
-</div>
-<hr>
-<!-- ♥------------------------------------♥------------------------------------♥---------------------------- -->
-<div class="container justify-content-center mt-5">
-  <div class="row">
-    <div class="col text-center mb-3 text-primary fs-3">
-      {{title2 |uppercase}}
+    <hr class="col-md-6">
+
+  <!-- -------------  CURRENCY PIPES  ♥---------------- -->
+    <div class="row">
+      <div class="col-md-6 text-center mb-3 text-primary fs-3">
+        {{title2 |uppercase}}
+      </div>
     </div>
-  </div>
-  <div class="row mb-3">
-    <label for="inputValor" class="col-sm-2 col-form-label  ">Valor:</label>
-    <div class="col-sm-4">
-      <input type="number" class="form-control border-primary" id="inputValor" [(ngModel)]="moneda">
+    <div class="row mb-3">
+      <label for="inputValor" class="col-sm-2 col-form-label  ">Valor:</label>
+      <div class="col-md-4">
+        <input type="number" class="form-control border-primary" id="inputValor" [(ngModel)]="moneda">
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6">
-      <select [(ngModel)]="symbolMoney" class="form-select border-3 border-primary" aria-label="select example">
-        <option selected>Selelccione el tipo de moneda</option>
-        <option value="1">USD</option>
-        <option value="2">EUR</option>
-      </select>
-    </div>
-    <br class="mb-5"><br class="mb-5"><br class="mb-4">
-  
-      <div class=" col-md-3 text-primary" *ngIf="moneda && symbolMoney != '0'">
+    <div class="row">
+      <div class="col-md-6">
+        <select [(ngModel)]="symbolMoney" class="form-select border-3 border-primary" aria-label="select example">
+          <option selected>Selelccione el tipo de moneda</option>
+          <option value="1">USD</option>
+          <option value="2">EUR</option>
+        </select>
+      </div>
+        <br class="mb-5"><br class="mb-5"><br class="mb-4">
+      <div class=" col-md-6 text-primary" *ngIf="moneda && symbolMoney != '0'">
         USD: <b> {{moneda | currency: 'USD' : 'symbol' : '0.0'}} </b>,
         EUR: <b> {{moneda | currency: 'EUR' : 'symbol' : '0.0'}} </b>
       </div>
+    </div>
+    <hr class="col-md-6 border-bottom border-3 border-primary">
+  
+<!-- ----------------   DATE PIPE     ♥ ----------------- -->
+    <div class="row">
+      <div class="col">
+        <p>{{myDate | date : 'shortTime'}}</p>
+        <p>{{myDate | date : 'mm:ss'}}</p>
+      </div>
+    </div>
   </div>
-</div>
-<hr>
-<!-- ♥------------------------------------♥------------------------------------♥---------------------------- -->

@@ -11,4 +11,5 @@ export class AppComponent {
   valor = ' ';
   moneda = 'number';
   symbolMoney = '';
+  myDate = Date.now();
 }
